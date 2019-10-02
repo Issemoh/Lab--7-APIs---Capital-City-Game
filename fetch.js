@@ -27,9 +27,9 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 }).addTo(map)
 iss()
-setInterval(iss, update)
+//setInterval(iss, update)
 
-iss()
+
 
 function iss() {
     fetch(url)
@@ -47,7 +47,7 @@ function iss() {
                 issMarker.setLatLng([lat, long])
             }
             let date = Date()
-            TimeRanges.innerHTML = date
+            timeElement.innerHTML = date
 
         })
     .catch(err =>{
